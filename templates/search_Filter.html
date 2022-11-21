@@ -45,6 +45,7 @@
   <div class="bg-image h-100" style="background-color: #6095F0;">
     <div class="mask d-flex align-items-center h-100">
       <div class="container">
+        <form class="d-flex" action="{{url_for('addToList')}}" method="POST" name="movie_list">
         <div class="row justify-content-center">
           <button class="button1" style="padding: 15px 32px;background-color: dark grey" type="submit">Add</button>
           <div class="col-12">
@@ -67,9 +68,9 @@
                       <tr>
                         <th scope="row">
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="{{movie.movie_id}}" name="checkbox" id="flexCheckDefault1" unchecked />
+                            <input class="form-check-input" type="checkbox" value="{{movie.movie_id}}" name="add_checkbox" id="flexCheckDefault1" unchecked />
                           </div>
-                          
+
                         </th>
                         <td>{{movie.title}}</td>
                         <td>{{movie.genre}}</td>
@@ -86,6 +87,7 @@
           </div>
         </div>
       </div>
+    </form>
     </div>
   </div>
 </section>
